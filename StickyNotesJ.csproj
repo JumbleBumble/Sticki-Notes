@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icon.ico" />
+    <None Remove="Icono.png" />
+    <None Remove="Resources\Add.png" />
+    <None Remove="Resources\bwave.PNG" />
+    <None Remove="Resources\Icon.ico" />
+    <None Remove="Resources\Icon.png" />
+    <None Remove="Resources\pin.png" />
+    <None Remove="Resources\push-pin.png" />
+    <None Remove="Resources\Remove.png" />
+    <None Remove="View\Windows\Icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icon.ico" />
+    <Resource Include="Icono.png" />
+    <Resource Include="Resources\Add.png" />
+    <Resource Include="Resources\Icon.ico" />
+    <Resource Include="Resources\pin.png" />
+    <Resource Include="Resources\push-pin.png" />
+    <Resource Include="Resources\Remove.png" />
+    <Resource Include="View\Windows\Icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="View\Windows\NoteWindow.xaml.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>
