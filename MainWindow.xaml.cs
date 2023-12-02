@@ -1,8 +1,7 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -79,11 +78,7 @@ namespace StickyNotesJ
                         NoteList.Items[SelectedIndex] = closedWindow.TextTitle;
                         WindowList[SelectedIndex] = WindowTuple;
                     }                 
-
-                    if (File.Exists(filePath))
-                    {
-                        SaveToFile(filePath, WindowList);
-                    }
+                    SaveToFile(filePath, WindowList);
                 }                   
             }
         }
@@ -125,7 +120,7 @@ namespace StickyNotesJ
 
         static void SaveToFile<T>(string filePath, T data)
         {
-            if (filePath != null && File.Exists(filePath))
+            if (filePath != null)
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(filePath));
                 string jsonData = JsonConvert.SerializeObject(data);
